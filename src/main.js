@@ -32,17 +32,17 @@ const scene = new THREE.Scene()
 
 // Audio setup - create audio listener and positional audio sources
 const listener = new THREE.AudioListener()
-// camera.add(listener)
+camera.add(listener)
 const sound = new THREE.PositionalAudio(listener)
 const audioLoader = new THREE.AudioLoader()
 
 // Load and configure audio1
 audioLoader.load('/LOST.mp3', function (buffer) {
 	sound.setBuffer(buffer)
-	sound.setRefDistance(10)
-	sound.setRolloffFactor(5)
-	sound.setMaxDistance(200)
-	sound.setDistanceModel('linear')
+	sound.setRefDistance(20)
+	sound.setRolloffFactor(2)
+	sound.setMaxDistance(150)
+	sound.setDistanceModel('exponential')
 	sound.setPlaybackRate(.8)
 	sound.setLoop(true)})
 
