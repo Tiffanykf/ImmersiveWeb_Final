@@ -94,7 +94,7 @@ function init() {
 	camera.position.set(9, -1, 40)
 
 	window.addEventListener('click', () => {
-		//add loading screen 
+		//remove loading screen 
 		loadingScreen.style.opacity = '0';
 		setTimeout(() => {
 			loadingScreen.style.display = 'none'; 
