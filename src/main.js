@@ -202,20 +202,20 @@ function resize() {
 //Detect collisions with raycaster
 function checkCollisions(controls) {
     // Set ray direction to camera's forward direction
-    pointer.set(0, 0, -1).applyQuaternion(camera.quaternion);
-    raycaster.set(camera.position, pointer);
+    pointer.set(0, 0, -1).applyQuaternion(camera.quaternion)
+    raycaster.set(camera.position, pointer)
 
     // Check for intersections with the collidable objects
-    const intersects = raycaster.intersectObjects(collisionObjects);
+    const intersects = raycaster.intersectObjects(collisionObjects)
 
     if (intersects.length > 0 && intersects[0].distance < 3) {
         // If a collision is detected within a short distance, stop the camera from moving forward
-        controls.object.position.copy(controls.prevPosition);
-        return;
+        controls.object.position.copy(controls.prevPosition)
+        return
     }
 
     // Store the camera's current position for future checks
-    controls.prevPosition = controls.object.position.clone();
+    controls.prevPosition = controls.object.position.clone()
 }
 
 // Function to check if the sphere was clicked
