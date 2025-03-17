@@ -211,7 +211,6 @@ function checkCollisions(controls) {
     if (intersects.length > 0 && intersects[0].distance < 3) {
         // If a collision is detected within a short distance, stop the camera from moving forward
         controls.object.position.copy(controls.prevPosition)
-        return
     }
 
     // Store the camera's current position for future checks
