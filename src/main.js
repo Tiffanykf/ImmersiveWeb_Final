@@ -95,10 +95,7 @@ function init() {
 
 	window.addEventListener('click', () => {
 		//remove loading screen 
-		loadingScreen.style.opacity = '0';
-		setTimeout(() => {
-			loadingScreen.style.display = 'none'; 
-		}, 50);
+		loadingScreen.style.display = 'none'
 		//Check for click on sphere
 		checkSphereClick()
 		//play audio
